@@ -1,0 +1,98 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-8">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Edit Profile</h4>
+                      <p class="card-category">Complete your profile</p>
+                  </div>
+                  <div class="card-body">
+                      <form [formGroup]="profileForm">
+                          <div class="row">
+                             
+                              <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Email address"
+
+                                    [(ngModel)]="userProfiledata?.email && userProfiledata.email"
+                                    formControlName="email">
+                                  </mat-form-field>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="First Name" type="text" 
+                                      [(ngModel)]="userProfiledata?.firstName && userProfiledata.firstName"
+										                  formControlName="firstName"
+                                    >
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">  
+                                  <input matInput placeholder="Last Name" type="text" 
+                                  [(ngModel)]="userProfiledata?.lastName && userProfiledata.lastName"
+                                  formControlName="lastName">
+                                </mat-form-field>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="PhoneNumber" type="text"
+                                  [(ngModel)]="userProfiledata?.contactNumber && userProfiledata.contactNumber"
+                                  formControlName="contactNumber">
+      
+                                  </mat-form-field>
+                              </div>
+                          </div>
+                         
+                          <div class="row">
+                              <div class="col-md-12">
+                                <label>About Me</label>
+                                <mat-form-field class="example-full-width">
+                                   <textarea matInput 
+                                   placeholder="she so thirsty, I'm in that two seat Lambo."
+                                   [(ngModel)]="userProfiledata?.about && userProfiledata.about"
+                                   formControlName="about"></textarea>
+                                                                
+                                 </mat-form-field>
+                                 
+                              </div>
+                          </div>
+                          <button mat-raised-button (click)="updateUser()" class="btn btn-danger pull-right">Update Profile</button>
+                          <button mat-raised-button (click)="close()" class="btn btn-danger pull-right">Close</button>
+                          <div class="clearfix"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4">
+              <div class="card card-profile">
+                  
+                     
+                          <!-- <img class="img" src="./assets/img/faces/marc.jpg" /> -->
+                          <div>
+                            <input type="file"  style="width: 100px;height: 100px;visibility: hidden;" #filepicker  accept=".jpg ,.jpeg, .png"  (change)="onimgpickup($event)">
+                            <button type="button" (click)="filepicker.click()">Browse Image</button>
+                          </div>
+                         <div class="card-avatar">
+                          <div class="image-preview">
+                            <img [src]="imagepreview" style="width: 200px;height:200px;" [alt]="">
+                            
+                         </div>
+                      
+                      
+                  </div>
+                  <div class="card-body">
+                      <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                           
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+
+ 
+ <div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-danger">
+           
+       </div>
+        <div class="card-body">
+            <div>
+                <div class="card-title">
+                    <h2></h2>
+                </div>
+                <div>
+                    
+
+                    <form [formGroup]="menuData">
+                        <div class="row">
+                                <div class="col-md-6">
+                                <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Menu Name"
+                                                formControlName="menuname">
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                              <mat-form-field class="example-full-width">
+                                <input matInput 
+                                       placeholder="Menu Description" 
+                                       type="text" 
+                                       formControlName="menudesc" >
+                              </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <input type="file"  #filepicker  accept=".jpg ,.jpeg, .png"  (change)="onimgpickup($event)">
+                                    <button type="button" (click)="filepicker.click()">PickImage</button>
+                                  </div>
+                                 
+                                  <div class="image-preview">
+                                    <img [src]="imagepreview" style="width: 150px;height:150px;" [alt]="">
+                                  </div>
+                            </div>
+                        </div>
+                       
+                        <button mat-raised-button (click)="addMenu()" 
+                                class="btn btn-danger pull-right">
+                                Add Menu</button>
+                        <div class="clearfix"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+
+.container-fluid{
+
+    margin-top: 150px;;
+}
+
+mat-card{
+
+    width: 60%;
+    margin: auto;
+}
+mat-form-field{
+    width: 40%;
+}
+
+
+input[type='file']{
+    visibility: hidden;
+}

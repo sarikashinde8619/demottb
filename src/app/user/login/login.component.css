@@ -1,0 +1,32 @@
+.mat-card{
+    margin: auto;
+    width: 35%;
+    height: 320px;
+    margin-top: 60px;
+ 
+    
+}
+.btn-login{
+  background-color: #001E53;
+  width: 100px;
+  float: right;
+  color: white;
+  height: 40px;
+}
+.matInput{
+  padding: 5px;;
+}
+.container-fluid{
+    background-image: url('/assets/img/backg.jpg');
+    background-position: center;
+    height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  scroll-behavior: unset;
+}
+.matInput{
+ width: 100%;
+}
+
+
