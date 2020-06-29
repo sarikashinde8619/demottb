@@ -62,13 +62,13 @@
                 <input matInput placeholder="Username" formControlName="uemailid" class="form-control">
                 </mat-form-field>
                 <mat-error *ngIf="registerForm.get('uemailid').invalid">Email Required * </mat-error>
-                <mat-error *ngIf="registerForm.get('uemailid').pattern">Please Enter Valid Email * </mat-error>       
+                <!-- <mat-error *ngIf="registerForm.get('uemailid').pattern">Please Enter Valid Email * </mat-error>        -->
            <mat-form-field class="example-full-width">
               <input matInput placeholder="Password" type="password" formControlName="password" class="form-control">
             </mat-form-field>
             <mat-error *ngIf="registerForm.get('password').invalid">Password Required * </mat-error>
         </form>
-        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+        <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button

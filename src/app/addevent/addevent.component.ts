@@ -91,5 +91,8 @@ export class AddeventComponent implements OnInit {
   });
 }
 
+close(){
+  
+}
 
 }

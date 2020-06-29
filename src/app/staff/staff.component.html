@@ -6,8 +6,7 @@
         style="float: right;margin-top: -35px;"
         type="button"  
         (click)="addStaff()"  
-        matTooltip="Add Staff" 
-        [matTooltipPosition]="'above'" 
+        matTooltip="Add Staff"  
         class="btn btn-danger">
       <i class="material-icons">add</i>
       Add
@@ -112,7 +111,7 @@
                                 Do you want to proceed? :{{deleteUserData?.firstName}} </p>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal"  (click)="deletethisUser(element)">yes</button>
+                              <button type="button" class="btn btn-default" data-dismiss="modal"  (click)="deletethisUser()">yes</button>
                             </div>
                          </div>
                         </div>
