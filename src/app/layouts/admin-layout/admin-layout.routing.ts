@@ -13,6 +13,11 @@ import { LoginComponent } from 'app/user/login/login.component';
 import { EditmenuComponent } from 'app/editmenu/editmenu.component';
 import { BartimetableComponent } from 'app/bartimetable/bartimetable.component';
 import { EventManagementComponent } from 'app/event-management/event-management.component';
+import { AddeventComponent } from 'app/addevent/addevent.component';
+import { EditeventComponent } from 'app/editevent/editevent.component';
+import { OfferManagementComponent } from 'app/offer-management/offer-management.component';
+import { StaffComponent } from 'app/staff/staff.component';
+import { AddstaffComponent } from 'app/addstaff/addstaff.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -67,6 +72,11 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'editmenu/:id',     component: EditmenuComponent},
     { path: 'timing',     component:BartimetableComponent},
     { path: 'events',     component:EventManagementComponent},
+    { path: 'offer',     component:OfferManagementComponent},
+    { path: 'staff',     component:StaffComponent},
+    { path: 'addstaff',     component:AddstaffComponent},
+    { path: 'addevent/:id',     component:AddeventComponent},
+    { path: 'eventmanage/:id',     component:EditeventComponent},
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },

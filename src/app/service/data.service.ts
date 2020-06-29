@@ -3,7 +3,9 @@ import {HttpClient, HttpHeaders} from  '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import {tap,map,catchError} from 'rxjs/operators'
 
-const endpoint = "http://localhost:3000/";
+//const endpoint = "http://localhost:3000/";
+const endpoint = "http://3.6.80.215:3000/";
+
 const headers = new HttpHeaders().set('Content-Type', 'application/json');
 @Injectable({
   providedIn: 'root'
@@ -26,6 +28,17 @@ export class DataService {
     )
   }
 
+
+  getAllOfferList(typeval):Observable<any>{
+    const queryparam = `?type=${typeval}`;
+    return this.http.get<any>(endpoint+'getalloffers'+queryparam).pipe(
+      tap((responce)=>{
+       console.log(responce);
+      }),
+     catchError(this.handleError<any>(''))
+   )
+ }
+
   getAllEvents():Observable<any>{
     return this.http.get<any>(endpoint+'getallevents').pipe(
       tap((responce)=>{
@@ -34,8 +47,23 @@ export class DataService {
      catchError(this.handleError<any>(''))
    )
  }
-  
-  
+ deleteEventbyId(id):Observable<any>{
+  return this.http.put(endpoint+'deletevent/'+id,headers).pipe(
+    tap((res)=>{
+      console.log(res);
+    }),
+    catchError(this.handleError<any>(''))
+  )
+
+}
+ 
+ addEvent(data):Observable<any>{  
+  return this.http.post<any>(endpoint+'addevent/',data).pipe(
+    tap((responce)=>{
+     console.log(responce.msg);
+  })      
+  ) 
+ }
   addMenu(data):Observable<any>{
     return this.http.post<any>(endpoint+'addmenu/',data).pipe(
       tap((responce)=>{
@@ -80,6 +108,16 @@ export class DataService {
       catchError(this.handleError<any>(''))
     );
   }
+
+  updateEvent(data,id):Observable<any>{
+    return this.http.put<any>(endpoint+'updatevent/'+id,data).pipe(
+      tap((responce)=>{
+        console.log(responce);
+      }),
+      catchError(this.handleError<any>(''))
+    )
+  }
+  
   updateMenu(data,id):Observable<any>{
     return this.http.put<any>(endpoint+'updatemenu/'+id,data).pipe(
       tap((responce)=>{
@@ -104,6 +142,18 @@ export class DataService {
       catchError(this.handleError<any>('shipPopular'))
     );
   }
+
+  getAllStaff(): Observable<any> {
+    return this.http.get(endpoint + 'getallstaff').pipe(
+      tap((response) => {
+        console.log(`{$response}`);
+      }),
+      catchError(this.handleError<any>('shipPopular'))
+    );
+  }
+
+
+  //getallstaff
   getUser(id):Observable<any>{
    // id=2;
     return this.http.get(endpoint + 'getuser/'+id).pipe(
@@ -114,7 +164,15 @@ export class DataService {
     );
   }
 
-  
+  getEventbyid(id):Observable<any>{
+    return this.http.get(endpoint + 'getevent/'+id).pipe(
+      tap((response) => {
+        console.log(`{$response}`);
+      }),
+      catchError(this.handleError<any>('user'))
+    );
+  }
+
   getMenubyid(id):Observable<any>{
     return this.http.get(endpoint + 'getmenu/'+id).pipe(
       tap((response) => {

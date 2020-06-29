@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'app/service/data.service';
-import * as moment from 'moment';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-event-management',
-  templateUrl: './event-management.component.html',
-  styleUrls: ['./event-management.component.css']
+  selector: 'app-offer-management',
+  templateUrl: './offer-management.component.html',
+  styleUrls: ['./offer-management.component.css']
 })
-export class EventManagementComponent implements OnInit {
+export class OfferManagementComponent implements OnInit {
+
   eventlist: any;
   displayedColumns: string[] = ['name','date','time','description','Action'];
   dataSource=this.eventlist;
@@ -20,7 +20,7 @@ export class EventManagementComponent implements OnInit {
 
   addEvent(){
 
-    this.router.navigate(['/addevent',1]);
+    this.router.navigate(['/addevent',0]);
     // this.dataser.addNewNenu(data).subscribe(res=>{
     //     console.log(result);
     // })
@@ -44,7 +44,7 @@ export class EventManagementComponent implements OnInit {
     this.router.navigate(['eventmanage',eventobj.id]);
   }
   getEventLIst() {
-    const typeval = 1;
+     const typeval = 0;
      this.dataser.getAllOfferList(typeval).subscribe((result)=>{
       console.log(result);
       this.eventlist=result;

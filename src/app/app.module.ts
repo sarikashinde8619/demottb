@@ -28,14 +28,22 @@ import { LoginComponent } from './user/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddmenuComponent } from './addmenu/addmenu.component';
 import { MatButtonModule } from '@angular/material/button';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+
 import { ToastrModule } from 'ngx-toastr';
 import { EditmenuComponent } from './editmenu/editmenu.component';
 import { BartimetableComponent } from './bartimetable/bartimetable.component';
 import { MatTableModule } from '@angular/material/table';
 import { EventManagementComponent } from './event-management/event-management.component';
+import { AddeventComponent } from './addevent/addevent.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { EditeventComponent } from './editevent/editevent.component';
+import { OfferManagementComponent } from './offer-management/offer-management.component';
+import { StaffComponent } from './staff/staff.component';
+import { AddstaffComponent } from './addstaff/addstaff.component';
 
 @NgModule({
   imports: [
@@ -52,7 +60,10 @@ import { EventManagementComponent } from './event-management/event-management.co
     MatInputModule,
     MatDialogModule,
     MatTableModule,
-    [NgxMaterialTimepickerModule],
+    MatDatepickerModule,
+    MatNativeDateModule ,
+   [NgxMaterialTimepickerModule],
+  
     HttpClientModule ,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
@@ -75,6 +86,11 @@ import { EventManagementComponent } from './event-management/event-management.co
     EditmenuComponent,
     BartimetableComponent,
     EventManagementComponent,
+    AddeventComponent,
+    EditeventComponent,
+    OfferManagementComponent,
+    StaffComponent,
+    AddstaffComponent,
 
   ],
   providers: [],

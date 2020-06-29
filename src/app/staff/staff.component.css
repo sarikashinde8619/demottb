@@ -1,0 +1,19 @@
+
+
+  td.mat-cell{
+    padding:10px;
+  }
+  table {
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .mat-header-cell{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .example-container {
+    height: 400px;
+    overflow: auto;
+    width: 100%;
+  }

@@ -1,4 +1,4 @@
-<div class="logo">
+<div class="logo" style="background-color: black;">
     <a href="https://www.creative-tim.com" class="simple-text">
         <div >
             <img  style="width: 150px;" src="/assets/img/logo.png"/>
@@ -6,7 +6,7 @@
         
     </a>
 </div>
-<div class="sidebar-wrapper">
+<div class="sidebar-wrapper" style="background-color:black;opacity: 1.0;;color: white;">
   <div *ngIf="isMobileMenu()">
     <form class="navbar-form">
       <span class="bmd-form-group">
@@ -54,11 +54,11 @@
         </li>
     </ul>
   </div>
-    <ul class="nav">
+    <ul class="nav" >
         <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
             <a class="nav-link" [routerLink]="[menuItem.path]">
                 <i class="material-icons">{{menuItem.icon}}</i>
-                <p>{{menuItem.title}}</p>
+                <p style="color: white;">{{menuItem.title}}</p>
             </a>
         </li>
     </ul>

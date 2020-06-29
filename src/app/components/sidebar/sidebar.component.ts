@@ -11,6 +11,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
     { path: '/table-list', title: 'App Users',  icon:'person', class: '' },
     { path: '/menu', title: 'Menu Managment',  icon:'line_weight', class: '' },
+    { path: '/offer', title: 'Offer Managment',  icon:'bubble_chart', class: '' },
     { path: '/events', title: 'Event Management',  icon:'toys', class: '' },
     { path: '/timing', title: 'Time Management',  icon:'schedule', class: '' },
     { path: '/staff', title: 'Staff',  icon:'accessibility', class: '' },
